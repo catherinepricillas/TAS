@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TAS</title>
+    <title>TAS - Sistem Penjadwalan TA</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,8 +46,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <a class="navbar-brand" href="index.html">TAS</a>
             </div>
-            <a class="navbar-brand" href="indexdosendaftar.html"><img style="margin-top:-10px; margin-left:-8px;" src="logo.png" alt="" /></a>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
@@ -90,7 +90,7 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Masayu Leila <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Dessi Puji Lestari <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
@@ -104,24 +104,38 @@
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-				<ul class="nav navbar-nav side-nav">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"></i> Jadwal Sidang <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                 <a href="Jadwal1.html">Sidang Keseluruhan</a>
+                            </li>
+                            <li>
+                                <a href="Jadwal2.html">Sidang Saya</a>
+                            </li>
+                            <li>
+                                <a href="Jadwal3.html">Sidang Bimbingan</a>
+                            </li>
+                            <li>
+                                <a href="Jadwal4.html">Sidang Pengujian</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"></i> Input Jadwal</a>
+                    </li>
                     
+					<!-- Request pergantian dosen pembimbing -->
 					<li>
-                        <a href="indexdosendaftar.html"></i> Input Dosen</a>
+                        <a href="#"></i> Ganti dosen pembimbing</a>
                     </li>
-                    <li  class="active">
-                        <a href="indexdosenformpembimbing.html"></i> Daftar Dosen Pembimbing</a>
+					
+					<!-- Request pergantian dosen penguji -->
+					<li>
+                        <a href="#"></i> Ganti dosen penguji</a>
                     </li>
-                    <li>
-                        <a href="indexdosenformpenguji.html"></i> Daftar Dosen Penguji</a>
-                    </li>
-                    <li>
-                        <a href="indexmahasiswadaftar.html"></i> Input Mahasiswa Sidang</a>
-                    </li>
-                    <li>
-                        <a href="indexmahasiswaform.html"></i> Daftar Mahasiswa Sidang</a>
-                    </li>
-               	
+					
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -135,41 +149,18 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Form Data Dosen
+                            Jadwal Sidang Tugas Akhir
                         </h1>
                     </div>
                 </div>
                 <!-- /.row -->
 
-                <div class="formmahasiswa">
-                    <form name= "registerForm">
-                        <small> Nama Dosen </small> <br>
-                        <input type= "text" name= "fullname" size= "60"> <br> 
-                        <small> NIP Dosen </small> <br>
-                        <input type= "text" name= "username" size= "60"> <br> 
-                        <small> No HP Dosen </small> <br>
-                        <input type= "text" name= "email" size= "60" onblur= "return validasiEmail()"> <br> 
-                        <small> Email Dosen </small> <br>
-                        <input type ="password" name= "password" size= "60" > <br>
-                        <small> Spesialisasi </small> <br>
-                        <input type= "password" name= "confirmpassword" size= "60" onblur= "return validasiPassword()"> <br> 
-                        <small> Status </small> <br>
-                        <select name=mydropdown style="width: 400px !important; min-width: 50px; max-width: 500px;">
-                        <option value="Cheese">Dosen Penguji</option>
-                        <option value="Milk">Dosen Pembimbing</option>
-                        <option value="Bread">Dosen Penguji dan Pembimbing</option>
-                        </select> 
-                        <p><a href="#" class="btn btn-primary btn-lg" style = "float : right;" role="button">Submit</a>
-                        
-                        
-                    </form>
-                </div>
-
                 <div class="row">
-                    
-                </div>
-                <!-- /.row -->
 
+					Diisi disini nanti.
+
+				</div>
+                <!-- /.row -->
 
             </div>
             <!-- /.container-fluid -->
