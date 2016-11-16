@@ -55,42 +55,4 @@ Hak akses:
 <li>Input data ruangan</li>
 </ul>
 
------
-
-### Technical details
-
-**Menurut gw** lebih bagus kalo dibuat jadi **_Single Page Application (SPA)_**<br />
-
-**SPA** berarti aplikasi nya cuma punya 1 halaman utama dan cuma nge-_reload_ halaman di bagian tertentu.
-
-Misalnya, pas ngeklik **Input data dosen**, aplikasi tidak melakukan _reload_ dan form buat input data dosen langsung muncul di bagian kanan.
-
-**Kelebihan**:
-<ul>
-<li>Kode tidak redundan</li>
-</ul>
-
-<br />
-
-Bisa dibuat dengan **jQuery**.<br />
-
-<br />
-
-Contoh (di file **main_tu.html**):<br />
-
-> **$(document).ready(function() {**
-> 
->      // kalo pilih menu buat input dosen
->      $('#menu_input_dosen').click(function() {
->            $('#isi_disini).load('form_input_dosen.html');
->      });
-> 
->      // kalo pilih menu buat input ruangan
->      $('#menu_input_ruangan').click(function() {
->           $('#isi_disini).load('form_input_ruangan.html');
->     });
->
-> **})**;
-
-
 
