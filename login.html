@@ -30,11 +30,12 @@
 			<img style="margin-top:-35px;" src="logo2.png" alt="" />
 			<h4 style="color:#9b9b9b">Sign in with your Account</h4>
 		</section>
-		<form method="post" role="login">
+
+		<form id="login_form" action="#" onsubmit="login()" method="post" role="login">
 			<img src="images/user.png" alt="" />
 			<input type="email" name="email" required placeholder="Email" id="form_email" class="form-control input-lg" />
 			<input type="password" name="password" required placeholder="Password" class="form-control input-lg" />
-			<input type="submit" name="go" onsubmit="login()" class="btn btn-block btn-info">Sign in</button>
+			<input id="tombol" type="submit" name="go" class="btn btn-block btn-info" value="Sign In"/>
 			<input type="checkbox" name="remember" value="1" checked /> Stay signed in
 			<a href="#" class="pull-right">Need help?</a>
 		</form>
@@ -49,26 +50,44 @@
 	<script>
 	
 		// determine the access scope
+<<<<<<< HEAD
 		function login() {
 			
 			var user = document.getElementById("form_email");
 			
+=======
+        function login() {
+			
+			var user = document.getElementById("form_email").value;
+            var alamat = "";
+			
+            
+>>>>>>> 4e27135b199b12c5af9ea94a7558044c86a684a5
 			if (user == "catherine@tas.com" || user == "raihan@tas.com" || user == "septi@tas.com" || 
 				user == "kelvin@tas.com" || user == "malik@tas.com") {
 					
 					// mahasiswa
+<<<<<<< HEAD
 					window.location.href = "jadwalm.html";
+=======
+					alamat = alamat + "jadwalm.html";
+>>>>>>> 4e27135b199b12c5af9ea94a7558044c86a684a5
 			
 			} else if (user == "dessi@tas.com") {
 			
 					// dosen
+<<<<<<< HEAD
 					window.location.href = "Jadwal1.html";
+=======
+					alamat = alamat + "jadwal1.html";
+>>>>>>> 4e27135b199b12c5af9ea94a7558044c86a684a5
 			
 			} else if (user == "dummy@tas.com") {
 			
 					// tim TU
 					//window.location.href = ""
 				
+<<<<<<< HEAD
 			}
 			
 			
@@ -77,6 +96,14 @@
 			
 		
 		}
+=======
+            }
+            console.log(user);
+			console.log(alamat);
+            
+		    document.getElementById('login_form').setAttribute('action', alamat);
+        }
+>>>>>>> 4e27135b199b12c5af9ea94a7558044c86a684a5
 	
 	</script>
 	
