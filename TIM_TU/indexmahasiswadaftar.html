@@ -9,19 +9,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TAS</title>
+    <title>TAS - Sistem Penjadwalan Otomatis</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="../css/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
+    <link href="../css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +47,7 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <a class="navbar-brand" href="indexmahasiswaform.html"><img style="margin-top:-10px; margin-left:-8px;" src="logo.png" alt="" /></a>
+            <a class="navbar-brand" href="indexmahasiswadaftar.html"><img style="margin-top:-10px; margin-left:-8px;" src="../logo.png" alt="" /></a>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
@@ -90,7 +90,7 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Masayu Leila <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Tim TU <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
@@ -104,25 +104,9 @@
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li >
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"></i> Jadwal Sidang <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="Jadwal1.html">Sidang Keseluruhan</a>
-                            </li>
-                            <li>
-                                <a href="Jadwal2.html">Sidang Saya</a>
-                            </li>
-                            <li>
-                                <a href="Jadwal3.html">Sidang Bimbingan</a>
-                            </li>
-                            <li>
-                                <a href="Jadwal4.html">Sidang Pengujian</a>
-                            </li>
-                        </ul>
-                    </li>
- <li>
+              <ul class="nav navbar-nav side-nav">
+                   
+					<li>
                         <a href="inputschedulecalendar.html"></i> Input Jadwal</a>
                     </li>
                     <li>
@@ -134,22 +118,19 @@
                     <li>
                         <a href="indexdosenformpenguji.html"></i> Daftar Dosen Penguji</a>
                     </li>
-                    <li  class="active">
+                    <li>
                         <a href="indexmahasiswadaftar.html"></i> Input Mahasiswa Sidang</a>
                     </li>
-                    <li>
+                    <li  class="active">
                         <a href="indexmahasiswaform.html"></i> Daftar Mahasiswa Sidang</a>
                     </li>
                     <li>
                         <a href="ubah_ruang.html"></i> Penggantian Ruangan</a>
                     </li>
-                    <li>
-                        <a href="ganti_dosen_uji.html"></i> Penggantian Dosen Penguji</a>
-                    </li>
+                 
                     <li>
                         <a href="ubah1.html"></i> Penggantian Jadwal</a>
                     </li>
-                </ul>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -169,61 +150,36 @@
                 </div>
                 <!-- /.row -->
 
-                <div class="row">
-                    <div class="col-lg-6">
+                <div class="formmahasiswa">
+                    <form name= "registerForm" onClick = indexmahasiswaform.html>
+                        <small> NIM Mahasiswa </small> <br>
+                        <input type= "text" name= "username" size= "60"> <br> 
+                        <small> Nama Mahasiswa </small> <br>
+                        <input type= "text" name= "fullname" size= "60"> <br> 
                         
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama</th>
-                                        <th>NIM</th>
-                                        <th>Topik</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Catherine Pricilla</td>
-                                        <td>13514004</td>
-                                        <td>Perancangan Antarmuka Aplikasi Ujian Online</td>
-                                        <td> <a href="indexmahasiswadaftarcatherine.html">Edit </a> <a href="indexmahasiswaform.html"> Delete </a>  </td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Dharma Kurnia Septialoka</td>
-                                        <td>13514028</td>
-                                        <td>Data Warehouse Pendukung Sistem Informasi Eksekutif untuk SIX ITB</td>
-                                        <td> <a href="indexmahasiswaform.html">Edit </a> <a href="indexmahasiswaform.html"> Delete </a> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Naufal Malik</td>
-                                        <td>13514052</td>
-                                        <td>Penggunaan Augmented Reality untuk Pendidikan Sejarah</td>
-                                        <td> <a href="indexmahasiswaform.html">Edit </a> <a href="indexmahasiswaform.html"> Delete </a> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Raihan Maulana</td>
-                                        <td>13514076</td>
-                                        <td>Time Series Clustering untuk Mendukung Keputusan Ekowisata</td>
-                                        <td>  <a href="indexmahasiswaform.html">Edit </a> <a href="indexmahasiswaform.html"> Delete </a> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Albertus Kelvin</td>
-                                        <td>13514100</td>
-                                        <td>Pengembangan Modul Apache Spark untuk Komputasi GPU</td>
-                                        <td> <a href="indexmahasiswaform.html">Edit </a> <a href="indexmahasiswaform.html"> Delete </a> </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                        <small> No HP Mahasiswa </small> <br>
+                        <input type= "text" name= "email" size= "60" onblur= "return validasiEmail()"> <br> 
+                        <small> Email Mahasiswa </small> <br>
+                        <input type ="text" name= "password" size= "60" > <br>
+                        <small> Judul Skripsi </small> <br>
+                        <input type= "text" name= "confirmpassword" size= "60" onblur= "return validasiPassword()"> <br> 
+                        <small> Dosen Pembimbing 1 </small> <br>
+                        <select name=mydropdown style="width: 400px !important; min-width: 50px; max-width: 500px;">
+                        <option value="Milk">Dessy Puji Lestari</option>
+                        <option value="Cheese">Masayu Leylia Khodra</option>
+                        <option value="Bread">Dody Dharma</option>
+                        </select>
+                        <br>
+                         
+                        <small> Dosen Pembimbing 2 </small> <br>
+                        <select name=mydropdown style="width: 400px !important; min-width: 50px; max-width: 500px;">
+                        <option value="Cheese">Masayu Leylia Khodra</option>
+                        <option value="Milk">Dessy Puji Lestari</option>
+                        <option value="Bread">Dody Dharma</option>
+                        </select> 
+                        <p><a href="#" class="btn btn-primary btn-lg" style = "float : right;" role="button">Submit</a>
+                    </form>
+                </div>
 
                 <div class="row">
                     
@@ -241,15 +197,15 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
+    <script src="../js/plugins/morris/raphael.min.js"></script>
+    <script src="../js/plugins/morris/morris.min.js"></script>
+    <script src="../js/plugins/morris/morris-data.js"></script>
 
 </body>
 

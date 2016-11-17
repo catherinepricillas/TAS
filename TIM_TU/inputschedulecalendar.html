@@ -9,49 +9,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TAS</title>
+   <title>TAS - Sistem Penjadwalan Otomatis</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/sb-admin.css" rel="stylesheet">
-    <link href="css/plugins/morris.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='fullcalendar.css' rel='stylesheet' />
-    <link href='fullcalendar.print.css' rel='stylesheet' media='print' />
-    <script src='moment.min.js'></script>
-    <script src='jquery.min.js'></script>
-    <script src='fullcalendar.min.js'></script>
-    <script src='id.js'></script>
-  <script>
-
-    $(document).ready(function() {
-        
-        $('#calendar').fullCalendar({
-            height : 800,
-            contentHeight: "auto",
-            header: {
-                left: 'prev, next',
-                center: 'title',
-                right: 'month,agendaDay,listMonth'
-            },
-            defaultDate: '2016-09-07',
-            navLinks: true, // can click day/week names to navigate views
-            editable: true,
-            eventLimit: true, // allow "more" link when too many events
-            hiddenDays: [0, 6],
-
-            events: [
-                {
-                    title: 'Catherine Pricilla',
-                    start: '2016-09-07T10:00'
-                }
-            ]
-        });
-        
-    });
-
-</script>
-
-
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/plugins/morris.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='../fullcalendar.css' rel='stylesheet' />
+    <link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='../moment.min.js'></script>
+    <script src='../jquery.min.js'></script>
+    <script src='../fullcalendar.min.js'></script>
+    <script src='../moment/locale/id.js'></script>
+  
     <style>
         #calendar {
             max-width:700px;
@@ -130,7 +100,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-<a class="navbar-brand" href="jadwalm.html"><img style="margin-top:-10px; margin-left:-8px;" src="logo.png" alt="" /></a>
+<a class="navbar-brand" href="Jadwal1.html"><img style="margin-top:-10px; margin-left:-8px;" src="../logo.png" alt="" /></a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -151,7 +121,7 @@
                                 <div class="media">
                                     <div class="media-body">
                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Senin, 26 September 2016</p>
-                                        <p>Sidang dilaksanakan <b>3 hari</b> lagi!</p>
+                                        <p>Sidang akan dilaksanakan <b>3 hari</b> lagi!</p>
                                     </div>
                                 </div>
                             </a>
@@ -161,7 +131,7 @@
                                 <div class="media">
                                     <div class="media-body">
                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Sabtu, 24 September 2016</p>
-                                        <p>Sidang dilaksanakan <b>5 hari</b> lagi!</p>
+                                        <p>Sidang akan dilaksanakan <b>5 hari</b> lagi!</p>
                                     </div>
                                 </div>
                             </a>
@@ -171,7 +141,7 @@
                                 <div class="media">
                                     <div class="media-body">
                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Minggu, 23 September 2016</p>
-                                        <p>Sidang dilaksanakan <b>7 hari</b> lagi!</p>
+                                        <p>Sidang akan dilaksanakan <b>7 hari</b> lagi!</p>
                                     </div>
                                 </div>
                             </a>
@@ -183,7 +153,7 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Catherine Pricilla <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Tim TU <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
@@ -198,10 +168,31 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li  class="active">
-                        <a href="jadwalm.html"></i> Jadwal Sidang</a>
+                    
+					<li  class="active">
+                        <a href="inputschedulecalendar.html"></i> Input Jadwal</a>
                     </li>
-
+                    <li>
+                        <a href="indexdosendaftar.html"></i> Input Dosen</a>
+                    </li>
+                    <li>
+                        <a href="indexdosenformpembimbing.html"></i> Daftar Dosen Pembimbing</a>
+                    </li>
+                    <li>
+                        <a href="indexdosenformpenguji.html"></i> Daftar Dosen Penguji</a>
+                    </li>
+                    <li>
+                        <a href="indexmahasiswadaftar.html"></i> Input Mahasiswa Sidang</a>
+                    </li>
+                    <li>
+                        <a href="indexmahasiswaform.html"></i> Daftar Mahasiswa Sidang</a>
+                    </li>
+                    <li>
+                        <a href="ubah_ruang.html"></i> Penggantian Ruangan</a>
+                    </li>
+                    <li>
+                        <a href="ubah1.html"></i> Penggantian Jadwal</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -215,7 +206,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header" style="text-align:center">
-                            Jadwal Sidang Tugas Akhir
+                            Input Your Available Schedule
                         </h1>
                     </div>
                 </div>
@@ -238,13 +229,110 @@
 
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
+    <script src="../js/plugins/morris/raphael.min.js"></script>
+    <script src="../js/plugins/morris/morris.min.js"></script>
+    <script src="../js/plugins/morris/morris-data.js"></script>
 
+	<script>
+
+    $(document).ready(function() {
+        
+        $('#calendar').fullCalendar({
+            height : 800,
+            contentHeight: "auto",
+            header: {
+                left: 'prev, next',
+                center: 'title',
+                right: ""
+            },
+            defaultDate: '2016-09-12',
+            navLinks: true, // can click day/week names to navigate views
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            hiddenDays: [0, 6],
+            events: [
+                {
+                    title: 'Edit Schedule',
+                    start: '2016-08-29',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                    title: 'Edit Schedule',
+                    start: '2016-08-30',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                    title: 'Edit Schedule',
+                    start: '2016-08-31',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                    title: 'Edit Schedule',
+                    start: '2016-09-01',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                    title: 'Edit Schedule',
+                    start: '2016-09-02',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                    title: 'Edit Schedule',
+                    start: '2016-09-03',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                    title: 'Edit Schedule',
+                    start: '2016-09-04',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                   title: 'Edit Schedule',
+                    start: '2016-09-05',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                   title: 'Edit Schedule',
+                    start: '2016-09-06',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                    title: 'Edit Schedule',
+                    start: '2016-09-07',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                    title: 'Edit Schedule',
+                    start: '2016-09-08',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                    title: 'Edit Schedule',
+                    start: '2016-09-09',
+                    url: 'inputscheduleform.html'
+                },
+                {
+                    title: 'Edit Schedule',
+                    start: '2016-09-10',
+                    url: 'inputscheduleform.html'
+                }
+            ],
+            
+            eventClick: function(event) {
+                if (event.url) {
+                    window.open(event.url);
+                    return false;
+                }
+            }
+              });
+            
+        });
+   
+   </script>
+   
 </body>
 
 </html>

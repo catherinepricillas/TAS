@@ -9,22 +9,28 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TAS</title>
+   <title>TAS - Sistem Penjadwalan Otomatis</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/sb-admin.css" rel="stylesheet">
-    <link href="css/plugins/morris.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='fullcalendar.css' rel='stylesheet' />
-    <link href='fullcalendar.print.css' rel='stylesheet' media='print' />
-    <script src='moment.min.js'></script>
-    <script src='jquery.min.js'></script>
-    <script src='fullcalendar.min.js'></script>
-    <script src='id.js'></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/plugins/morris.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='../fullcalendar.css' rel='stylesheet' />
+    <link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='../moment.min.js'></script>
+    <script src='../jquery.min.js'></script>
+    <script src='../fullcalendar.min.js'></script>
+    <script src='../moment/locale/id.js'></script>
   <script>
 
     $(document).ready(function() {
         
+        $("#save_ubah_jdwl_ruangan").click(function() {
+            
+                alert("Saved");
+            
+            });
+
         $('#calendar').fullCalendar({
             height : 800,
             contentHeight: "auto",
@@ -73,8 +79,24 @@
                     start: '2016-08-31T14:30:00'
                 },
                 {
+                    title: 'Friska Nataniel',
+                    start: '2016-09-12T17:30:00'
+                },
+                {
+                    title: 'Taufic Leonardo',
+                    start: '2016-09-22T14:00:00'
+                },
+                {
+                    title: 'Johan Sentosa',
+                    start: '2016-09-13T07:00:00'
+                },
+                {
                     title: 'Jason Jeremy',
                     start: '2016-09-21T14:00:00'
+                },
+                {
+                    title: 'Kevin Supendi',
+                    start: '2016-09-21T07:00:00'
                 }
             ]
         });
@@ -88,8 +110,8 @@
         #calendar {
             max-width:700px;
             margin: 0 auto;
-        } 
-        .search-form .form-group {
+        }
+         .search-form .form-group {
           float: right !important;
           transition: all 0.35s, border-radius 0s;
           width: 20px;
@@ -161,7 +183,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button><a class="navbar-brand" href="Jadwal1.html"><img style="margin-top:-10px; margin-left:-8px;" src="logo.png" alt="" /></a>
+                </button>
+<a class="navbar-brand" href="Jadwal1.html"><img style="margin-top:-10px; margin-left:-8px;" src="../logo.png" alt="" /></a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -182,7 +205,7 @@
                                 <div class="media">
                                     <div class="media-body">
                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Senin, 26 September 2016</p>
-                                        <p>Sidang <b>Catherine Pricilla</b> dilaksanakan <b>3 hari</b> lagi!</p>
+                                        <p>Sidang akan dilaksanakan <b>3 hari</b> lagi!</p>
                                     </div>
                                 </div>
                             </a>
@@ -192,7 +215,7 @@
                                 <div class="media">
                                     <div class="media-body">
                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Sabtu, 24 September 2016</p>
-                                        <p>Sidang <b>Dharma Kurnia Septialoka</b> dilaksanakan <b>3 hari</b> lagi!</p>
+                                        <p>Sidang akan dilaksanakan <b>5 hari</b> lagi!</p>
                                     </div>
                                 </div>
                             </a>
@@ -202,7 +225,7 @@
                                 <div class="media">
                                     <div class="media-body">
                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Minggu, 23 September 2016</p>
-                                        <p>Sidang <b>Raihan Maulana</b> dilaksanakan <b>3 hari</b> lagi!</p>
+                                        <p>Sidang akan dilaksanakan <b>7 hari</b> lagi!</p>
                                     </div>
                                 </div>
                             </a>
@@ -214,7 +237,7 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Masayu Leila <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Tim TU <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
@@ -229,24 +252,8 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"></i> Jadwal Sidang <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li  class="active">
-                                <a href="Jadwal1.html">Sidang Keseluruhan</a>
-                            </li>
-                            <li>
-                                <a href="Jadwal2.html">Sidang Saya</a>
-                            </li>
-                            <li>
-                                <a href="Jadwal3.html">Sidang Bimbingan</a>
-                            </li>
-                            <li>
-                                <a href="Jadwal4.html">Sidang Pengujian</a>
-                            </li>
-                        </ul>
-                    </li>
- <li>
+                    
+                    <li>
                         <a href="inputschedulecalendar.html"></i> Input Jadwal</a>
                     </li>
                     <li>
@@ -267,10 +274,7 @@
                     <li>
                         <a href="ubah_ruang.html"></i> Penggantian Ruangan</a>
                     </li>
-                    <li>
-                        <a href="ganti_dosen_uji.html"></i> Penggantian Dosen Penguji</a>
-                    </li>
-                    <li>
+                    <li  class="active">
                         <a href="ubah1.html"></i> Penggantian Jadwal</a>
                     </li>
                 </ul>
@@ -286,7 +290,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header" style="text-align:center">
-                            Jadwal Sidang Tugas Akhir
+                            Edit Jadwal Sidang Tugas Akhir Saya
                         </h1>
                     </div>
                 </div>
@@ -294,6 +298,8 @@
 
                 <div class="row">
                     <div id='calendar'></div>
+                    <br>
+                    <button type="button" id="save_ubah_jdwl_ruangan" class="btn btn-success" style="margin-left: 760px">Simpan</button>
                 </div>
                 <!-- /.row -->
 
@@ -309,12 +315,12 @@
 
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
+    <script src="../js/plugins/morris/raphael.min.js"></script>
+    <script src="../js/plugins/morris/morris.min.js"></script>
+    <script src="../js/plugins/morris/morris-data.js"></script>
 
 </body>
 

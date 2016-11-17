@@ -9,19 +9,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TAS - Sistem Penjadwalan TA</title>
+    <title>TAS - Sistem Penjadwalan Otomatis</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="../css/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
+    <link href="../css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,8 +46,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">TAS</a>
+                
             </div>
+            <a class="navbar-brand" href="indexdosenformpenguji.html"><img style="margin-top:-10px; margin-left:-8px;" src="../logo.png" alt="" /></a>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
@@ -90,7 +91,7 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Dessi Puji Lestari <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Tim TU <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
@@ -104,38 +105,32 @@
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"></i> Jadwal Sidang <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                 <a href="Jadwal1.html">Sidang Keseluruhan</a>
-                            </li>
-                            <li>
-                                <a href="Jadwal2.html">Sidang Saya</a>
-                            </li>
-                            <li>
-                                <a href="Jadwal3.html">Sidang Bimbingan</a>
-                            </li>
-                            <li>
-                                <a href="Jadwal4.html">Sidang Pengujian</a>
-                            </li>
-                        </ul>
+				<ul class="nav navbar-nav side-nav">
+					<li>
+                        <a href="inputschedulecalendar.html"></i> Input Jadwal</a>
                     </li>
                     <li>
-                        <a href="#"></i> Input Jadwal</a>
+                        <a href="indexdosendaftar.html"></i> Input Dosen</a>
                     </li>
-                    
-					<!-- Request pergantian dosen pembimbing -->
-					<li>
-                        <a href="#"></i> Ganti dosen pembimbing</a>
+                    <li>
+                        <a href="indexdosenformpembimbing.html"></i> Daftar Dosen Pembimbing</a>
                     </li>
-					
-					<!-- Request pergantian dosen penguji -->
-					<li>
-                        <a href="#"></i> Ganti dosen penguji</a>
+                    <li  class="active">
+                        <a href="indexdosenformpenguji.html"></i> Daftar Dosen Penguji</a>
                     </li>
-					
+                    <li>
+                        <a href="indexmahasiswadaftar.html"></i> Input Mahasiswa Sidang</a>
+                    </li>
+                    <li>
+                        <a href="indexmahasiswaform.html"></i> Daftar Mahasiswa Sidang</a>
+                    </li>
+                    <li>
+                        <a href="ubah_ruang.html"></i> Penggantian Ruangan</a>
+                    </li>
+                
+                    <li>
+                        <a href="ubah1.html"></i> Penggantian Jadwal</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -149,18 +144,65 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Jadwal Sidang Tugas Akhir
+                            Daftar Dosen Penguji
                         </h1>
                     </div>
                 </div>
                 <!-- /.row -->
 
                 <div class="row">
+                    <div class="col-lg-6">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>NIP</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Ir. Dwi Hendratmo W., M.Sc, Ph.D</td>
+                                        <td>123456789012321</td>
+                                        <td> <a href="indexmahasiswaform.html">Edit </a> <a href="indexmahasiswaform.html"> Delete </a>  </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Dr. Dessi Puji Lestari</td>
+                                        <td>109876543212345</td>
+                                        <td> <a href="indexmahasiswaform.html">Edit </a> <a href="indexmahasiswaform.html"> Delete </a>  </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Ir. Windy Gambetta</td>
+                                        <td>125437680912654</td>
+                                        <td> <a href="indexmahasiswaform.html">Edit </a> <a href="indexmahasiswaform.html"> Delete </a>  </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Dr. Nur Ulfa Maulvidevi S.T, M.Sc</td>
+                                        <td>253647198035264</td>
+                                        <td> <a href="indexmahasiswaform.html">Edit </a> <a href="indexmahasiswaform.html"> Delete </a>  </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Dr.Ir.Rinaldi Munir, M.T</td>
+                                        <td>273846530912345</td>
+                                        <td> <a href="indexmahasiswaform.html">Edit </a> <a href="indexmahasiswaform.html"> Delete </a>  </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
-					Diisi disini nanti.
-
-				</div>
+                <div class="row">
+                    
+                </div>
                 <!-- /.row -->
+
 
             </div>
             <!-- /.container-fluid -->
@@ -172,15 +214,15 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
+    <script src="../js/plugins/morris/raphael.min.js"></script>
+    <script src="../js/plugins/morris/morris.min.js"></script>
+    <script src="../js/plugins/morris/morris-data.js"></script>
 
 </body>
 
