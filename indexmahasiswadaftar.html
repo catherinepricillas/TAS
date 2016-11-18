@@ -171,9 +171,19 @@
                 <div class="formmahasiswa">
                     <form name= "registerForm" onClick = indexmahasiswaform.html>
                         <small> NIM Mahasiswa </small> <br>
-                        <input type= "text" name= "username" size= "60"> <br> 
+                        <input type= "text" name= "username" id= "nim" size= "60" onblur= "myFunc()"> <br> 
+                        <script>
+                        function myFunc() {
+                            var x = document.getElementById("nim");
+                            if (x.value == "13514004") {
+                                document.getElementById("nama").value = "Catherine Pricilla";
+                            } else {
+                                return ("Nim tidak ditemukan. Coba lagi");
+                            }
+                        }
+                        </script>
                         <small> Nama Mahasiswa </small> <br>
-                        <input type= "text" name= "fullname" size= "60"> <br> 
+                        <input type= "text" name= "fullname" id = "nama" size= "60"> <br> 
                         
                         <small> No HP Mahasiswa </small> <br>
                         <input type= "text" name= "email" size= "60" onblur= "return validasiEmail()"> <br> 

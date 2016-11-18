@@ -170,23 +170,41 @@
 
                 <div class="formmahasiswa">
                     <form name= "registerForm">
-                        <small> Nama Dosen </small> <br>
-                        <input type= "text" name= "fullname" size= "60"> <br> 
                         <small> NIP Dosen </small> <br>
-                        <input type= "text" name= "username" size= "60"> <br> 
+                        <input type= "text" name= "username" id = "nim" size= "60" onblur= "myFunc()"> <br> 
+                        <script>
+                        function myFunc() {
+                            var x = document.getElementById("nim");
+                            if (x.value == "123456789012321") {
+                                document.getElementById("nama").value = "Ir. Dwi Hendratmo W., M.Sc, Ph.D";
+                            } else {
+                                alert ("NIP tidak ditemukan. Coba lagi");
+                            }
+                        }
+                        </script>
+                        <small> Nama Dosen </small> <br>
+                        <input type= "text" name= "fullname" id = "nama" size= "60"> <br> 
                         <small> No HP Dosen </small> <br>
                         <input type= "text" name= "email" size= "60" onblur= "return validasiEmail()"> <br> 
                         <small> Email Dosen </small> <br>
-                        <input type ="password" name= "password" size= "60" > <br>
+                        <input type ="text" name= "password" size= "60" > <br>
                         <small> Spesialisasi </small> <br>
-                        <input type= "password" name= "confirmpassword" size= "60" onblur= "return validasiPassword()"> <br> 
+                        <input type= "text" name= "confirmpassword" size= "60" onblur= "return validasiPassword()"> <br> 
                         <small> Status </small> <br>
                         <select name=mydropdown style="width: 400px !important; min-width: 50px; max-width: 500px;">
                         <option value="Cheese">Dosen Penguji</option>
                         <option value="Milk">Dosen Pembimbing</option>
                         <option value="Bread">Dosen Penguji dan Pembimbing</option>
                         </select> 
-                        <p><a href="#" class="btn btn-primary btn-lg" style = "float : right;" role="button">Submit</a>
+                        <p><class="btn btn-primary btn-lg" style = "float : right;" role="button" onClick = "konfirmasi()">Submit</a>
+                        <script>
+                        function konfirmasi() {
+                            if ((confirm('Apakah data yang anda masukkan benar?'))==true){
+                                alert('Data berhasil disimpan!');
+                               window.location = "indexdosendaftar.html";
+                            }
+                        }
+                        </script>
                         
                         
                     </form>
