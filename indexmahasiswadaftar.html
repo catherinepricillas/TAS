@@ -90,7 +90,7 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Masayu Leila <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Masayu Leilia <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
@@ -106,8 +106,8 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
               <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"></i> Jadwal Sidang <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#jadwal-sidang-hehe"></i> Exam Schedule <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="jadwal-sidang-hehe" class="collapse">
                             <li>
                                 <a href="Jadwal1.html">Sidang Keseluruhan</a>
                             </li>
@@ -122,33 +122,45 @@
                             </li>
                         </ul>
                     </li>
- <li>
-                        <a href="inputschedulecalendar.html"></i> Input Jadwal</a>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#student-registration"></i> Student Registration <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="student-registration" class="collapse">
+                            <li>
+                                <a href="indexmahasiswadaftar.html">Add Student</a>
+                            </li>
+                            <li>
+                                <a href="indexmahasiswaform.html">View Students</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="indexdosendaftar.html"></i> Input Dosen</a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#examiner-supervisorregistration"></i> Examiner/ Supervisor Registration <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="examiner-supervisorregistration" class="collapse">
+                            <li>
+                                <a href="indexdosendaftar.html">Add Examiner/ Supervisor</a>
+                            </li>
+                            <li>
+                                <a href="indexdosenformpembimbing.html">View Supervisors</a>
+                            </li>
+                            <li>
+                                <a href="indexdosenformpenguji.html">View Examiners</a>
+                            </li>
+                        </ul>
                     </li>
+                    <!-- <li>
+                        <a href="inputschedulecalendar.html"></i> Input Your Schedule</a>
+                    </li> -->
+                    
+                   <!--  <li>
+                        <a href="ubah_ruang.html"></i> Change Exam's Room</a>
+                    </li> -->
                     <li>
-                        <a href="indexdosenformpembimbing.html"></i> Daftar Dosen Pembimbing</a>
+                        <a href="ganti_dosen_uji.html"></i> Change Examiner</a>
                     </li>
-                    <li>
-                        <a href="indexdosenformpenguji.html"></i> Daftar Dosen Penguji</a>
-                    </li>
-                    <li>
-                        <a href="indexmahasiswadaftar.html"></i> Input Mahasiswa Sidang</a>
-                    </li>
-                    <li  class="active">
-                        <a href="indexmahasiswaform.html"></i> Daftar Mahasiswa Sidang</a>
-                    </li>
-                    <li>
-                        <a href="ubah_ruang.html"></i> Penggantian Ruangan</a>
-                    </li>
-                    <li>
-                        <a href="ganti_dosen_uji.html"></i> Penggantian Dosen Penguji</a>
-                    </li>
-                    <li>
-                        <a href="ubah1.html"></i> Penggantian Jadwal</a>
-                    </li>
+                    <!-- <li>
+                        <a href="ubah1.html"></i> Change Your Schedule</a>
+                    </li> -->
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -162,7 +174,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Form Data Mahasiswa Sidang
+                            Student Data Form
                         </h1>
                     </div>
                 </div>
@@ -170,7 +182,7 @@
 
                 <div class="formmahasiswa">
                     <form name= "registerForm" onClick = indexmahasiswaform.html>
-                        <small> NIM Mahasiswa </small> <br>
+                        <small> Student Number </small> <br>
                         <input type= "text" name= "username" id= "nim" size= "60" onblur= "myFunc()"> <br> 
                         <script>
                         function myFunc() {
@@ -182,16 +194,16 @@
                             }
                         }
                         </script>
-                        <small> Nama Mahasiswa </small> <br>
+                        <small> Student's Name </small> <br>
                         <input type= "text" name= "fullname" id = "nama" size= "60"> <br> 
                         
-                        <small> No HP Mahasiswa </small> <br>
+                        <small> Telephone Number </small> <br>
                         <input type= "text" name= "email" size= "60" onblur= "return validasiEmail()"> <br> 
-                        <small> Email Mahasiswa </small> <br>
+                        <small> Email </small> <br>
                         <input type ="text" name= "password" size= "60" > <br>
-                        <small> Judul Skripsi </small> <br>
+                        <small> Topic </small> <br>
                         <input type= "text" name= "confirmpassword" size= "60" onblur= "return validasiPassword()"> <br> 
-                        <small> Dosen Pembimbing 1 </small> <br>
+                        <small> Supervisor 1 </small> <br>
                         <select name=mydropdown style="width: 400px !important; min-width: 50px; max-width: 500px;">
                         <option value="Milk">Dessy Puji Lestari</option>
                         <option value="Cheese">Masayu Leylia Khodra</option>
@@ -199,7 +211,7 @@
                         </select>
                         <br>
                          
-                        <small> Dosen Pembimbing 2 </small> <br>
+                        <small> Supervisor 2 </small> <br>
                         <select name=mydropdown style="width: 400px !important; min-width: 50px; max-width: 500px;">
                         <option value="Cheese">Masayu Leylia Khodra</option>
                         <option value="Milk">Dessy Puji Lestari</option>

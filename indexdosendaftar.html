@@ -104,10 +104,10 @@
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-<ul class="nav navbar-nav side-nav">
+              <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"></i> Jadwal Sidang <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#jadwal-sidang-hehe"></i> Exam Schedule <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="jadwal-sidang-hehe" class="collapse">
                             <li>
                                 <a href="Jadwal1.html">Sidang Keseluruhan</a>
                             </li>
@@ -122,33 +122,45 @@
                             </li>
                         </ul>
                     </li>
- <li>
-                        <a href="inputschedulecalendar.html"></i> Input Jadwal</a>
-                    </li>
-                    <li  class="active">
-                        <a href="indexdosendaftar.html"></i> Input Dosen</a>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#student-registration"></i> Student Registration <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="student-registration" class="collapse">
+                            <li>
+                                <a href="indexmahasiswadaftar.html">Add Student</a>
+                            </li>
+                            <li>
+                                <a href="indexmahasiswaform.html">View Students</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="indexdosenformpembimbing.html"></i> Daftar Dosen Pembimbing</a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#examiner-supervisorregistration"></i> Examiner/ Supervisor Registration <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="examiner-supervisorregistration" class="collapse">
+                            <li>
+                                <a href="indexdosendaftar.html">Add Examiner/ Supervisor</a>
+                            </li>
+                            <li>
+                                <a href="indexdosenformpembimbing.html">View Supervisors</a>
+                            </li>
+                            <li>
+                                <a href="indexdosenformpenguji.html">View Examiners</a>
+                            </li>
+                        </ul>
                     </li>
+                    <!-- <li>
+                        <a href="inputschedulecalendar.html"></i> Input Your Schedule</a>
+                    </li> -->
+                    
+                   <!--  <li>
+                        <a href="ubah_ruang.html"></i> Change Exam's Room</a>
+                    </li> -->
                     <li>
-                        <a href="indexdosenformpenguji.html"></i> Daftar Dosen Penguji</a>
+                        <a href="ganti_dosen_uji.html"></i> Change Examiner</a>
                     </li>
-                    <li>
-                        <a href="indexmahasiswadaftar.html"></i> Input Mahasiswa Sidang</a>
-                    </li>
-                    <li>
-                        <a href="indexmahasiswaform.html"></i> Daftar Mahasiswa Sidang</a>
-                    </li>
-                    <li>
-                        <a href="ubah_ruang.html"></i> Penggantian Ruangan</a>
-                    </li>
-                    <li>
-                        <a href="ganti_dosen_uji.html"></i> Penggantian Dosen Penguji</a>
-                    </li>
-                    <li>
-                        <a href="ubah1.html"></i> Penggantian Jadwal</a>
-                    </li>
+                    <!-- <li>
+                        <a href="ubah1.html"></i> Change Your Schedule</a>
+                    </li> -->
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -162,7 +174,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Form Data Dosen
+                             Add Examiner/ Supervisor
                         </h1>
                     </div>
                 </div>
@@ -170,8 +182,8 @@
 
                 <div class="formmahasiswa">
                     <form name= "registerForm">
-                        <small> NIP Dosen </small> <br>
-                        <input type= "text" name= "username" id = "nim" size= "60" onblur= "myFunc()"> <br> 
+                        <small> Employee Number </small> <br>
+                        <input type= "text" name= "username" id = "nim" size= "60" <!-- onblur= "myFunc()" -->> <br> 
                         <script>
                         function myFunc() {
                             var x = document.getElementById("nim");
@@ -182,21 +194,22 @@
                             }
                         }
                         </script>
-                        <small> Nama Dosen </small> <br>
+                        <small> Name </small> <br>
                         <input type= "text" name= "fullname" id = "nama" size= "60"> <br> 
-                        <small> No HP Dosen </small> <br>
+                        <small> Telephone No </small> <br>
                         <input type= "text" name= "email" size= "60" onblur= "return validasiEmail()"> <br> 
-                        <small> Email Dosen </small> <br>
+                        <small> Email </small> <br>
                         <input type ="text" name= "password" size= "60" > <br>
-                        <small> Spesialisasi </small> <br>
+                        <small> Specialization </small> <br>
                         <input type= "text" name= "spesialisasi" size= "60" placeholder = "Jika lebih dari 1, pisahkan dengan koma" onblur= "return validasiPassword()"> <br> 
                         <small> Status </small> <br>
                         <select name=mydropdown style="width: 400px !important; min-width: 50px; max-width: 500px;">
-                        <option value="Cheese">Dosen Penguji</option>
-                        <option value="Milk">Dosen Pembimbing</option>
-                        <option value="Bread">Dosen Penguji dan Pembimbing</option>
+                        <option value="Cheese">Supervisor</option>
+                        <option value="Milk">Examiner</option>
+                        <option value="Bread">Supervisor and Examiner</option>
                         </select> 
-                        <p><class="btn btn-primary btn-lg" style = "float : right;" role="button" onClick = "konfirmasi()">Submit</a>
+                        <p><a href="#" class="btn btn-primary btn-lg" style = "float : right;" role="button">Submit</a>
+                        <!-- <p><class="btn btn-primary btn-lg" style = "float : right;" role="button" onClick = "konfirmasi()">Submit</a> -->
                         <script>
                         function konfirmasi() {
                             if ((confirm('Apakah data yang anda masukkan benar?'))==true){
