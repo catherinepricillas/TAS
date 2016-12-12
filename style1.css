@@ -1,5 +1,27 @@
 @CHARSET "UTF-8";
 
+body{
+	background-image:url(background.jpg);
+    animation-name: example;
+    animation-duration: 100s;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 100s; /* Safari 4.0 - 8.0 */
+}
+@-webkit-keyframes example {
+	0%   {background-image:url(background.jpg);}
+    25%  {background-image:url(bg2.jpg);}
+    50%  {background-image:url(background2.jpg);}
+    100% {background-image:url(bg2.jpg);}
+}
+
+
+@keyframes example {
+    0%   {background-image:url(background.jpg);}
+    25%  {background-image:url(bg2.jpg);}
+    50%  {background-image:url(background2.jpg);}
+    100% {background-image:url(bg2.jpg);}
+}
+
 * {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
