@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TAS - Sistem Penjadwalan Otomatis</title>
+    <title>TAS - Automatic Scheduling System</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +52,9 @@
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
-                  <li>
+                
+				<!--
+				<li>
                                 <form style="margin-top:15px; margin-right:10px" action="search.html" class="search-form">
                                     <div class="form-group has-feedback">
                                         <label style="margin-top:-7px; color:#222222;" for="search" class="sr-only">Search</label>
@@ -61,6 +63,8 @@
                                     </div>
                                 </form>
                 </li>
+				-->
+				
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
                     <ul class="dropdown-menu message-dropdown">
@@ -118,28 +122,28 @@
                 <ul class="nav navbar-nav side-nav">
                     
 					<li>
-                        <a href="inputschedulecalendar.html"></i> Input Jadwal</a>
+                        <a href="inputschedulecalendar.html"></i> Input Schedule</a>
                     </li>
                     <li>
-                        <a href="indexdosendaftar.html"></i> Input Dosen</a>
+                        <a href="indexdosendaftar.html"></i> Input Lecturers</a>
                     </li>
                     <li>
-                        <a href="indexdosenformpembimbing.html"></i> Daftar Dosen Pembimbing</a>
+                        <a href="indexdosenformpembimbing.html"></i> List of Supervisors</a>
                     </li>
                     <li>
-                        <a href="indexdosenformpenguji.html"></i> Daftar Dosen Penguji</a>
+                        <a href="indexdosenformpenguji.html"></i> List of Examiners</a>
                     </li>
                     <li>
-                        <a href="indexmahasiswadaftar.html"></i> Input Mahasiswa Sidang</a>
+                        <a href="indexmahasiswadaftar.html"></i> Input Students</a>
                     </li>
                     <li>
-                        <a href="indexmahasiswaform.html"></i> Daftar Mahasiswa Sidang</a>
+                        <a href="indexmahasiswaform.html"></i> List of Students</a>
                     </li>
                     <li  class="active">
-                        <a href="ubah_ruang.html"></i> Penggantian Ruangan</a>
+                        <a href="ubah_ruang.html"></i> Presentation Room Setting</a>
                     </li>
                     <li>
-                        <a href="ubah1.html"></i> Penggantian Jadwal</a>
+                        <a href="ubah1.html"></i> Schedule Setting</a>
                     </li>
 					
                 </ul>
@@ -155,7 +159,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Perubahan Jadwal Ruangan
+								Presentation Room Settings
                         </h1>
                     </div>
                 </div>
@@ -167,66 +171,42 @@
 					Diisi disini nanti.
 					-->
 					
+					<!-- SEARCH FEATURE -->
+					<div id="search_sid_name_room" class="form-group" style="margin-left: 300px; margin-right: 300px; margin-top: 30px">
+							
+						<table border=0 class="table_search">
+							
+							<tr class="spaceUnder">
+								<td>
+									<div class="form-group has-feedback">
+										<b style="margin-right: 20px">Find</b>
+									</div>
+								</td>
+								<td>
+									<div class="form-group has-feedback"  style="margin-right: 20px">
+										<input type="text" id="txtSID_search" class="form-control" name="search_sid" placeholder="SID" />
+									</div>
+								</td>
+								<td>
+									<div class="form-group has-feedback"  style="margin-right: 20px">
+										<input type="text" id="txtName_search" class="form-control" name="search_name" placeholder="Name" />
+									</div>
+								</td>
+								<td>
+									<div class="form-group has-feedback" style="margin-right: 20px">
+                                        <input type="text" id="txtRoom_search" class="form-control" name="search_room" placeholder="Room" />
+										<span class="glyphicon glyphicon-search form-control-feedback"></span>
+									</div>
+								</td>
+								
+							</tr>
+							
+						</table>
+						
+					</div>
 					
-					<div id="ubah_jdwl_ruangan" class="form-group" style="margin-left: 300px; margin-right: 300px; margin-top: 30px">
-					
-						<form>
-							
-							<!-- SELECT BOX untuk memilih ruangan yang akan diubah jadwalnya -->
-							<select id="opsi_ubah_jdwl_ruangan" class="form-control" style="margin-bottom: 50px">
-								<option value="Pilih ruangan">Pilih ruangan</option>
-								<option value="Ruang Seminar">Ruang seminar</option>
-								<option value="7602">7602</option>
-								<option value="7610">7610</option>
-								<option value="7606">7606</option>
-								<option value="7601">7601</option>
-							</select>
-							
-							<!-- FIELDSET untuk mengubah jadwal ruangan yang dipilih -->
-							<div id="fieldset_ubah_jdwl_ruangan" style="display:none">
-								<fieldset style="margin-bottom: 50px">
-								
-									<legend id="legend_ubah_jdwl_ruangan">
-										
-									</legend>
-								
-									<table>
-										
-										<tr>
-											<td style="padding-left:100px">Waktu awal</td>
-											<td style="padding-left:100px">
-												<input type="text" class="form-control" name="wkt_awal_ubah_jdwl_ruangan">
-											</td>
-										</tr>
-										<tr>
-											<td colspan=2 style="height: 15px" />
-										</tr>
-										<tr>
-											<td style="padding-left:100px">Waktu akhir</td>
-											<td style="padding-left:100px">
-												<input type="text" class="form-control" name="wkt_akhir_ubah_jdwl_ruangan">
-											</td>
-										</tr>
-										<tr>
-											<td colspan=2 style="height: 15px" />
-										</tr>
-										<tr>
-											<td style="padding-left:100px">Hari</td>
-											<td style="padding-left:100px">
-												<input type="text" class="form-control" name="hari_ubah_jdwl_ruangan">
-											</td>
-										</tr>
-									
-									</table>
-									
-								</fieldset>
-								
-								<!-- SAVE BUTTON -->
-								<button type="button" id="save_ubah_jdwl_ruangan" class="btn btn-success" style="margin-left: 370px">Simpan</button>
-								
-							</div>
-							
-						</form>
+					<!-- LIST OF STUDENTS -->
+					<div id="ubah_jdwl_ruangan" class="form-group" style="margin-left: 200px; margin-right: 200px; margin-top: 50px">
 						
 					</div>
 					
@@ -261,32 +241,244 @@
 	<!-- Custom javascript -->
 	<script>
 	
+		function save_room() {
+			alert("Saved");
+		}
+
+		var search_sid = document.getElementById("txtSID_search");
+		var search_name = document.getElementById("txtName_search");
+		var search_room = document.getElementById("txtRoom_search");
 		
+		var data = [
+			{
+				'sid': '13514004',
+				'name': 'Catherine Pricilla',
+				'room': '7602'
+			},
+			{
+				'sid': '13514028',
+				'name': 'Dharma Kurnia Septialoka',
+				'room': '7610'
+			},
+			{
+				'sid': '13514076',
+				'name': 'Raihan Maulana Warman',
+				'room': '7609'
+			},
+			{
+				'sid': '13514100',
+				'name': 'Albertus Kelvin',
+				'room': '7601'
+			},
+			{
+				'sid': '12345678',
+				'name': 'Lorem ipsum 0',
+				'room': '7606'
+			},
+		];
+		
+		var room_data;
+		var tmp_generator;
+		
+		function assignRoom() {
+		
+			room_data = [];
+			
+			for (var idx=0; idx < data.length; idx++) {
+				room_data.push(data[idx].room);
+			}
+		
+		}
+		
+		function undo(row_id) {
+		
+			var selectBox = document.getElementById("opsi_ubah_jdwl_ruangan" + row_id);
+			
+			selectBox.value = room_data[row_id-1];
+			
+		}
+		
+		function clearCatalogTable() {
 	
-		$(document).ready(function() {
-			$("#opsi_ubah_jdwl_ruangan").change(function() {
+			var tables = document.getElementsByTagName("TABLE");
+	
+			for (var i = tables.length - 1; i >= 0; i -= 1) {
+				if (tables[i].className.indexOf("table_search") < 0) { 
+					tables[i].parentNode.removeChild(tables[i]);
+				}
+			}
+		}
+			
+		function generateHTML() {
+		
+			var myTableDiv, table, tableBody, tr, td;
+			var row;
+			
+			
+			console.log("Generating HTML");
+			
+			
+			myTableDiv = document.getElementById("ubah_jdwl_ruangan");
+			
+			table = document.createElement("TABLE");
+			table.border = 0;
+			table.width = 500;
+			table.id = "roomSettings";
+			table.style = "margin-bottom: 30px";
+			table.className = "table";
+			
+			myTableDiv.appendChild(table);
+		
+			// table header
+			row = document.getElementById("roomSettings").insertRow(0);
+			row.insertCell(0);
+			row.insertCell(1);
+			row.insertCell(2);
+			row.insertCell(3);
+			row.insertCell(4);
+			
+			document.getElementById("roomSettings").rows[0].cells[0].innerHTML = "<b>ID</b>";
+			document.getElementById("roomSettings").rows[0].cells[1].innerHTML = "<b>SID</b>";
+			document.getElementById("roomSettings").rows[0].cells[2].innerHTML = "<b>Name</b>";
+			document.getElementById("roomSettings").rows[0].cells[3].innerHTML = "<b>Presentation Room</b>";
+			document.getElementById("roomSettings").rows[0].cells[4].innerHTML = "<b style='margin-left: 45px'>Undo</b>";
+			
+			for (var idx = 0; idx < tmp_generator.length; idx++) {
+			
+				// table body
+				row = document.getElementById("roomSettings").insertRow(idx+1);
+				row.insertCell(0);
+				row.insertCell(1);
+				row.insertCell(2);
+				row.insertCell(3);
+				row.insertCell(4);
 				
-				if (this.value != "Pilih ruangan") {
+				document.getElementById("roomSettings").rows[idx+1].cells[0].innerHTML = "<div style='margin-bottom: 30px; vertical-align: middle'>" + (idx+1) + "</div>";
+				document.getElementById("roomSettings").rows[idx+1].cells[1].innerHTML = tmp_generator[idx].sid;
+				document.getElementById("roomSettings").rows[idx+1].cells[2].innerHTML = tmp_generator[idx].name;
+				document.getElementById("roomSettings").rows[idx+1].cells[3].innerHTML = 
+									'<select id="opsi_ubah_jdwl_ruangan' + (idx+1) + '" class="form-control" style="margin-top: 0px">' + 
+										'<option value="' + tmp_generator[idx].room + '">' + tmp_generator[idx].room + '</option>' +
+										'<option value="Choose room">Choose room</option>' +
+										'<option value="7602">7602</option>' +
+										'<option value="7609">7609</option>' +
+										'<option value="7610">7610</option>' +
+										'<option value="7606">7606</option>' +
+										'<option value="7601">7601</option>' +
+									'</select>';
+				document.getElementById("roomSettings").rows[idx+1].cells[4].innerHTML = 
+					'<button type="button" id="undo' + (idx+1) + '" onclick="undo(' + (idx+1) + ')" class="btn btn-warning" style="margin-left: 45px">Undo</button>';
 				
-					var valueSelected = this.value;
-					$("#fieldset_ubah_jdwl_ruangan").show();
-					$("#legend_ubah_jdwl_ruangan").html(valueSelected);
+			}
+			
+			// save button
+			table = document.createElement("TABLE");
+			table.border = 0;
+			table.width = 500;
+			table.id = "roomSettings_save";
+			table.style = "margin-bottom: 30px";
+			table.className = "table";
+			
+			myTableDiv.appendChild(table);
+		
+			row = document.getElementById("roomSettings_save").insertRow(0);
+			row.insertCell(0);
+			
+			document.getElementById("roomSettings_save").rows[0].cells[0].innerHTML = 
+					'<button type="button" id="save_ubah_jdwl_ruangan" onclick="save_room()" class="btn btn-success">Save</button>';
+			document.getElementById("roomSettings_save").rows[0].cells[0].style = "text-align: right"; 
+					
+		}
+		
+		// add event handler for search_sid
+		search_sid.addEventListener("keypress", function(e) {
+			var key = e.which || e.keyCode;
+			
+			if (key === 13) {
+				// 13 is enter
 				
-				} else {
+				tmp_generator = [];
 				
-					$("#fieldset_ubah_jdwl_ruangan").hide();
+				// find the data containing key term
+				for (var idx = 0; idx < data.length; idx++) {
 				
+					if ((data[idx].sid.toLowerCase().indexOf(search_sid.value.toLowerCase()) >= 0 && search_sid.value != "") ||
+						(data[idx].name.toLowerCase().indexOf(search_name.value.toLowerCase()) >= 0 && search_name.value != "") ||
+						(data[idx].room.toLowerCase().indexOf(search_room.value.toLowerCase()) >= 0 && search_room.value != "")) {
+						
+						tmp_generator.push(data[idx]);
+						
+					}
 				}
 				
-			});
+				// generate the html
+				clearCatalogTable()	
+				generateHTML();
 			
-			$("#save_ubah_jdwl_ruangan").click(function() {
-			
-				alert("Saved");
-			
-			});
-			
+			}
 		});
+		
+		// add event handler for search_name
+		search_name.addEventListener("keypress", function(e) {
+			var key = e.which || e.keyCode;
+			
+			if (key === 13) {
+				// 13 is enter
+				
+				tmp_generator = [];
+				
+				// find the data containing key term
+				for (var idx = 0; idx < data.length; idx++) {
+				
+					if ((data[idx].sid.toLowerCase().indexOf(search_sid.value.toLowerCase()) >= 0 && search_sid.value != "") ||
+						(data[idx].name.toLowerCase().indexOf(search_name.value.toLowerCase()) >= 0 && search_name.value != "") ||
+						(data[idx].room.toLowerCase().indexOf(search_room.value.toLowerCase()) >= 0 && search_room.value != "")) {
+						
+						tmp_generator.push(data[idx]);
+						
+					}
+				}
+				
+				// generate the html
+				clearCatalogTable()	
+				generateHTML();
+			
+			}
+		});
+		
+		// add event handler for search_room
+		search_room.addEventListener("keypress", function(e) {
+			var key = e.which || e.keyCode;
+			
+			if (key === 13) {
+				// 13 is enter
+				
+				tmp_generator = [];
+				
+				// find the data containing key term
+				for (var idx = 0; idx < data.length; idx++) {
+				
+					if ((data[idx].sid.toLowerCase().indexOf(search_sid.value.toLowerCase()) >= 0 && search_sid.value != "") ||
+						(data[idx].name.toLowerCase().indexOf(search_name.value.toLowerCase()) >= 0 && search_name.value != "") ||
+						(data[idx].room.toLowerCase().indexOf(search_room.value.toLowerCase()) >= 0 && search_room.value != "")) {
+						
+						tmp_generator.push(data[idx]);
+						
+					}
+				}
+				
+				// generate the html
+				clearCatalogTable()	
+				generateHTML();
+			
+			}
+		});
+		
+		// generate the html for the first time
+		tmp_generator = data;
+		assignRoom();
+		clearCatalogTable()	
+		generateHTML();
 	
 	</script>
 	
